@@ -16,14 +16,12 @@ Update your exercise definition and instructions,
 
     git pull upstream ente
 
-**NOTE:** to pull from upstream, you need to have completed the instructions in the [duckietown-lx repository README](https://github.com/duckietown/duckietown-lx/blob/mooc2022/README.md) to *fork* this repository.
+**NOTE:** to pull from upstream, you need to have completed the instructions in the [general procedure for running learning experiences in the Duckietown manual](https://docs.duckietown.com/ente/duckietown-manual/60-learning-experiences/lx-general-procedure.html) to *fork* this repository.
 
 
 ## 2. Make sure your system is up-to-date
 
-- 💻 Always make sure your Duckietown Shell is updated to the latest version. See [installation instructions](https://github.com/duckietown/duckietown-shell)
-
-This exercise is meant to be run with the `ente` version of the shell commands. You can switch to that version with `dts profile switch ente`. 
+- 💻 Always make sure your Duckietown Shell is updated to the latest version. See [installation instructions](https://docs.duckietown.com/ente/duckietown-manual/10-setup/02-software/duckietown-shell-dts-installation.html)
 
 - 💻 Update the shell commands: `dts update`
 
@@ -64,10 +62,10 @@ Follow the instructions on the notebook and work through the notebooks in sequen
 You can build your code with 
 
 ```
-dts code build
+dts code build -R ROBOT_NAME
 ```
 
-This will build a docker image with your code compiled inside - you should your ROS node get built during the process. 
+This will build a docker image with your code compiled inside - you should see your ROS node get built during the process. 
 
 
 ### Testing with Duckiematrix

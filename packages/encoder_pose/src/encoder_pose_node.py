@@ -51,7 +51,7 @@ class EncoderPoseNode(DTROS):
         # nominal R and L, you may change these if needed:
 
         self.R = 0.0318  # meters, default value of wheel radius
-        self.baseline = 0.1  # meters, default value of baseline
+        self.baseline = 0.11  # meters, default value of baseline for DB21
 
         # Defining subscribers:
 
@@ -188,7 +188,7 @@ class EncoderPoseNode(DTROS):
                 odom.pose.pose.position.y = y_curr  # y position - estimate
                 odom.pose.pose.position.z = 0  # z position - no flying allowed in Duckietown
 
-                # these are quaternions - stuff for a different course!
+                # these are quaternions!
                 odom.pose.pose.orientation.x = 0
                 odom.pose.pose.orientation.y = 0
                 odom.pose.pose.orientation.z = np.sin(theta_curr / 2)
