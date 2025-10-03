@@ -3,7 +3,7 @@ from typing import Tuple
 import numpy as np
 
 
-def delta_phi(ticks: int, prev_ticks: int, resolution: int) -> Tuple[float, float]:
+def delta_phi(ticks: int, prev_ticks: int, resolution: int) -> float:
     """
     Args:
         ticks: Current tick count from the encoders.
@@ -11,14 +11,12 @@ def delta_phi(ticks: int, prev_ticks: int, resolution: int) -> Tuple[float, floa
         resolution: Number of ticks per full wheel rotation returned by the encoder.
     Return:
         dphi: Rotation of the wheel in radians.
-        ticks: current number of ticks.
     """
 
     # TODO: these are random values, you have to implement your own solution in here
-    ticks = prev_ticks + int(np.random.uniform(0, 10))
     dphi = np.random.random()
     # ---
-    return dphi, ticks
+    return dphi
 
 
 def estimate_pose(

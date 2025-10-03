@@ -99,13 +99,15 @@ class EncoderPoseNode(DTROS):
                 self.left_tick_prev = encoder_msg.data
                 return
 
+            left_ticks_curr = encoder_msg.data
+
             # running the DeltaPhi() function copied from the notebooks to calculate rotations
-            delta_phi_left, left_ticks_prev = delta_phi(
-                encoder_msg.data, self.left_tick_prev, encoder_msg.resolution
+            delta_phi_left = delta_phi(
+                left_ticks_curr, self.left_tick_prev, encoder_msg.resolution
             )
             if delta_phi_left == 0:
                 return
-            self.left_tick_prev = left_ticks_prev
+            self.left_tick_prev = left_ticks_curr
             self.delta_phi_left += delta_phi_left
 
     def cbRightEncoder(self, encoder_msg):
@@ -120,13 +122,15 @@ class EncoderPoseNode(DTROS):
                 self.right_tick_prev = encoder_msg.data
                 return
 
+            right_ticks_curr = encoder_msg.data
+
             # calculate rotation of right wheel
-            delta_phi_right, right_tick_prev = delta_phi(
-                encoder_msg.data, self.right_tick_prev, encoder_msg.resolution
+            delta_phi_right = delta_phi(
+                right_ticks_curr, self.right_tick_prev, encoder_msg.resolution
             )
             if delta_phi_right == 0:
                 return
-            self.right_tick_prev = right_tick_prev
+            self.right_tick_prev = right_ticks_curr
             self.delta_phi_right += delta_phi_right
 
     def posePublisher(self, event=None):
