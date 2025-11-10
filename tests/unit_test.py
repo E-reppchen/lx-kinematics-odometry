@@ -46,7 +46,7 @@ class UnitTestOdometry:
             )
         # given how much the robot rotates with wheels rotation of 5 and 10 degree,
         # calculate the number of steps required to do a circle.
-        # this is indipendent from R and the baseline
+        # this is independent from R and the baseline
         steps4circle = int(2 * np.pi / robot_rotation)
 
         # iterate steps4circle times the pose estimation
