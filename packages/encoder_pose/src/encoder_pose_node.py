@@ -158,7 +158,7 @@ class EncoderPoseNode(DTROS):
 
                 theta_curr = self.angle_clamp(theta_curr)  # angle always between 0,2pi
 
-                # self.loging to screen for debugging purposes
+                # self.logging to screen for debugging purposes
                 self.log("              ODOMETRY             ")
                 # self.log(f"Baseline : {self.baseline}   R: {self.R}")
                 self.log("Just this move:")

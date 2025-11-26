@@ -118,7 +118,7 @@ dts code workbench -R [ROBOT_NAME]
 ```
 
 
-In another terminal, you can launch the `noVNC` viewer for this exercise which can be useful to send commands to the robot and view the odometry that you calculating in the RViZ window. 
+In another terminal, you can launch the `noVNC` viewer for this exercise which can be useful to send commands to the robot and view the odometry that you are calculating in the RViZ window. 
 
 ```
 dts code vnc -R [ROBOT_NAME]
